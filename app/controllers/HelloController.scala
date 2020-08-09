@@ -5,6 +5,5 @@ import play.api.mvc.{AbstractController, Action, AnyContent, ControllerComponent
 
 
 class HelloController @Inject()(cc: ControllerComponents) extends AbstractController(cc) {
-  def hello(): Action[AnyContent] = Action(Ok)
-
+  def hello(): Action[AnyContent] = Action(Ok("Hello world"))
 }

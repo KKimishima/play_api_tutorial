@@ -11,6 +11,8 @@ class HelloControllerSpec extends PlaySpec with GuiceOneAppPerTest {
       val req = FakeRequest(GET, "/hello")
       val res = route(app, req).get
       status(res) mustBe OK
+      contentType(res) mustBe Some("text/plain")
+      contentAsString(res) mustBe "Hello world"
     }
   }
 }
